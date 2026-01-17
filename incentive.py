@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 
 class INCENTIVE_PROGRAM:
 
@@ -40,7 +40,9 @@ class INCENTIVE_PROGRAM:
                     end_date = self._parse_iso_datetime(incentive['end_date'])
                     # Convert to naive datetime for comparison if timezone-aware
                     end_date_naive = end_date.replace(tzinfo=None) if end_date.tzinfo else end_date
-                    if incentive['paid_out'] == False and end_date_naive > datetime.now():
+                    # Allow 5 minutes leeway for the timestamp comparison
+                    curr_date_time = datetime.now() - timedelta(minutes=5)
+                    if incentive['paid_out'] == False and end_date_naive > curr_date_time:
                         curr_ticker = incentive['market_ticker']
                         if float(ticker_dict[curr_ticker]['yes_ask_dollars']) >= 0.7 or float(ticker_dict[curr_ticker]['no_ask_dollars']) >= 0.7:
                             continue

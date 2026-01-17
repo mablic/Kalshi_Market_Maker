@@ -8,7 +8,7 @@ from trade import TRADE
 from clients import KalshiHttpClient, Environment
 from dotenv import load_dotenv
 from cryptography.hazmat.primitives import serialization
-from datetime import datetime
+from datetime import datetime, timedelta
 
 TRADE_SIZE = 1
 TRADE_DELTA = 0.01
@@ -17,6 +17,13 @@ EXPIRATION_TS = 1
 TRADE_TICKER_SIZE = 2
 LOG_FILE = "trade.log"
 INCENTIVE_SIZE = 300
+TRADE_DELTA_RANGE = [0.01, 0.1]
+TRADE_DELTA_INCREMENT = 0.01
+
+CHECK_TIME = 3600
+OPEN_ORDERS_MAX = CHECK_TIME // WAIT_TIME * 0.8
+OPEN_POSITIONS_MAX = 5
+
 
 class MARKET_BOT:
 
@@ -31,6 +38,10 @@ class MARKET_BOT:
         self.log_file = LOG_FILE
         self.trade_ticker_size = TRADE_TICKER_SIZE
         self.trade.incentive_size = INCENTIVE_SIZE
+
+        self.open_positions_count = 0
+        self.open_orders_count = 0
+        self.last_check_time = datetime.now()
 
     def get_datetime(self):
         return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -108,6 +119,7 @@ class MARKET_BOT:
                         ticker = position.get('ticker', 'N/A')
                         price = yes_price_dollars if side == 'yes' else no_price_dollars
                         self.log(f"{self.get_datetime()} [CLOSE POSITION] Ticker: {ticker} | Side: {side} | Price: {price} | Count: {count}")
+                        self.open_positions_count += 1
                         self.client.close_open_position_order(
                             ticker=position['ticker'],
                             side=side,
@@ -250,6 +262,7 @@ class MARKET_BOT:
                     
                 for order in market_orders:
                     if order:
+                        self.open_orders_count += 1
                         try:
                             ticker = order.get('ticker', 'N/A')
                             side = order.get('side', 'N/A')
@@ -306,9 +319,21 @@ class MARKET_BOT:
 
     def run(self):
         """Main trading loop with error handling - keeps running even if errors occur."""
+
         while True:
             try:
                 self.start_trading()
+                if self.open_positions_count >= 5 and self.trade.trade_delta + self.trade_delta_increment < self.trade_delta_range[1]:
+                    self.log(f"{self.get_datetime()} [TRADE DELTA] Increasing trade delta from {self.trade.trade_delta} to {self.trade.trade_delta + self.trade_delta_increment}")
+                    self.trade.trade_delta += self.trade_delta_increment
+                if self.open_orders_count < OPEN_ORDERS_MAX and self.trade.trade_delta - self.trade_delta_increment > self.trade_delta_range[0]:
+                    self.log(f"{self.get_datetime()} [TRADE DELTA] Decreasing trade delta from {self.trade.trade_delta} to {self.trade.trade_delta - self.trade_delta_increment}")
+                    self.trade.trade_delta -= self.trade_delta_increment
+                if datetime.now() - self.last_check_time > timedelta(seconds=CHECK_TIME):
+                    self.log(f"{self.get_datetime()} [CHECK TIME] Checking time, resetting open positions and orders counts")
+                    self.last_check_time = datetime.now()
+                    self.open_positions_count = 0
+                    self.open_orders_count = 0
             except KeyboardInterrupt:
                 self.log(f"{self.get_datetime()} [SHUTDOWN] Received interrupt signal, shutting down gracefully")
                 raise  # Re-raise to allow clean shutdown
