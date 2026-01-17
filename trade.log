@@ -1,0 +1,550 @@
+2026-01-16 16:55:34 [NEW SESSION] Starting new trading session
+2026-01-16 16:55:51 [NEW INCENTIVE] Trading tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57,Reward:$2000.00), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57,Reward:$2000.00)
+2026-01-16 16:55:51 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.4300 x 53 | $0.4200 x 111 | $0.4100 x 111 | $0.4000 x 111 | $0.3900 x 111
+  └─ No (Top 5):  $0.5200 x 70 | $0.4000 x 200 | $0.3900 x 268 | $0.3800 x 45 | $0.3500 x 40
+2026-01-16 16:55:51 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4300 x 64 | $0.4100 x 154 | $0.4000 x 143 | $0.3700 x 85 | $0.3600 x 752
+  └─ No (Top 5):  $0.5600 x 43 | $0.5500 x 205 | $0.5400 x 208 | $0.5100 x 50 | $0.5000 x 20
+2026-01-16 16:56:52 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 16:56:52 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 16:56:52 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.4300 x 53 | $0.4200 x 111 | $0.4100 x 111 | $0.4000 x 111 | $0.3900 x 111
+  └─ No (Top 5):  $0.4800 x 70 | $0.3800 x 45 | $0.3500 x 40 | $0.3400 x 10 | $0.3300 x 10
+2026-01-16 16:56:53 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4300 x 51 | $0.4000 x 150 | $0.3900 x 237 | $0.3800 x 3 | $0.3700 x 124
+  └─ No (Top 5):  $0.5600 x 13 | $0.5500 x 210 | $0.5400 x 208 | $0.5100 x 50 | $0.5000 x 20
+2026-01-16 16:57:53 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 16:57:54 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 16:57:54 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.4300 x 52 | $0.4200 x 111 | $0.4100 x 111 | $0.4000 x 111 | $0.3900 x 111
+  └─ No (Top 5):  $0.4300 x 30 | $0.4200 x 50 | $0.3800 x 22 | $0.3700 x 32 | $0.3500 x 40
+2026-01-16 16:57:54 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4300 x 51 | $0.4000 x 72 | $0.3900 x 150 | $0.3800 x 224 | $0.3700 x 85
+  └─ No (Top 5):  $0.5500 x 251 | $0.5400 x 208 | $0.5200 x 31 | $0.5000 x 20 | $0.4500 x 20
+2026-01-16 16:58:55 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 16:58:55 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 16:58:55 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.4300 x 32 | $0.4200 x 111 | $0.4100 x 111 | $0.4000 x 111 | $0.3900 x 111
+  └─ No (Top 5):  $0.4400 x 9 | $0.4300 x 50 | $0.4200 x 23 | $0.3800 x 22 | $0.3500 x 40
+2026-01-16 16:58:56 [OPEN ORDER] Ticker: KXLOWTMIA-26JAN17-B60.5 | Side: yes | Action: buy | Count: 1 | Type: limit | Price: 0.4200
+2026-01-16 16:58:56 [ORDER RESPONSE] OrderID: fec2003b... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 16:58:56 [OPEN ORDER] Ticker: KXLOWTMIA-26JAN17-B60.5 | Side: no | Action: buy | Count: 1 | Type: limit | Price: 0.4300
+2026-01-16 16:58:56 [ORDER RESPONSE] OrderID: 3dcf9b53... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 16:58:56 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4300 x 25 | $0.4200 x 157 | $0.4100 x 145 | $0.3700 x 85 | $0.3600 x 752
+  └─ No (Top 5):  $0.5400 x 93 | $0.5100 x 4 | $0.5000 x 70 | $0.4800 x 360 | $0.4700 x 200
+2026-01-16 16:59:57 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 16:59:57 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 16:59:57 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.4400 x 2 | $0.4300 x 52 | $0.4200 x 111 | $0.4100 x 111 | $0.4000 x 111
+  └─ No (Top 5):  $0.4900 x 70 | $0.4800 x 28 | $0.3900 x 10 | $0.3500 x 40 | $0.3400 x 10
+2026-01-16 16:59:57 [OPEN ORDER] Ticker: KXLOWTMIA-26JAN17-B60.5 | Side: yes | Action: buy | Count: 1 | Type: limit | Price: 0.4300
+2026-01-16 16:59:57 [ORDER RESPONSE] OrderID: a22ee541... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 16:59:57 [OPEN ORDER] Ticker: KXLOWTMIA-26JAN17-B60.5 | Side: no | Action: buy | Count: 1 | Type: limit | Price: 0.4800
+2026-01-16 16:59:57 [ORDER RESPONSE] OrderID: 76b6d0ff... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 16:59:58 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4200 x 51 | $0.4000 x 150 | $0.3900 x 295 | $0.3700 x 125 | $0.3600 x 752
+  └─ No (Top 5):  $0.5600 x 178 | $0.5500 x 4 | $0.5400 x 97 | $0.5000 x 70 | $0.4500 x 20
+2026-01-16 17:00:58 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:00:59 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:00:59 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.4400 x 3 | $0.4300 x 32 | $0.4200 x 111 | $0.4100 x 111 | $0.4000 x 111
+  └─ No (Top 5):  $0.5100 x 70 | $0.4800 x 28 | $0.4000 x 148 | $0.3900 x 214 | $0.3800 x 239
+2026-01-16 17:00:59 [OPEN ORDER] Ticker: KXLOWTMIA-26JAN17-B60.5 | Side: yes | Action: buy | Count: 1 | Type: limit | Price: 0.4300
+2026-01-16 17:00:59 [ORDER RESPONSE] OrderID: b8a206d2... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 17:00:59 [OPEN ORDER] Ticker: KXLOWTMIA-26JAN17-B60.5 | Side: no | Action: buy | Count: 1 | Type: limit | Price: 0.5000
+2026-01-16 17:00:59 [ORDER RESPONSE] OrderID: fb55c3d5... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 17:01:00 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4200 x 51 | $0.3800 x 150 | $0.3700 x 375 | $0.3600 x 752 | $0.3500 x 119
+  └─ No (Top 5):  $0.5700 x 250 | $0.5600 x 1 | $0.5500 x 4 | $0.5400 x 208 | $0.5200 x 31
+2026-01-16 17:02:00 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:02:01 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:02:01 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.4400 x 1 | $0.4300 x 32 | $0.4200 x 111 | $0.4100 x 111 | $0.4000 x 111
+  └─ No (Top 5):  $0.5500 x 50 | $0.5000 x 28 | $0.4500 x 200 | $0.4400 x 274 | $0.3900 x 14
+2026-01-16 17:02:01 [OPEN ORDER] Ticker: KXLOWTMIA-26JAN17-B60.5 | Side: yes | Action: buy | Count: 1 | Type: limit | Price: 0.4300
+2026-01-16 17:02:01 [ORDER RESPONSE] OrderID: 5c3568cf... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 17:02:01 [OPEN ORDER] Ticker: KXLOWTMIA-26JAN17-B60.5 | Side: no | Action: buy | Count: 1 | Type: limit | Price: 0.5400
+2026-01-16 17:02:01 [ORDER RESPONSE] OrderID: 196c6f51... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 17:02:01 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4300 x 25 | $0.4200 x 217 | $0.3900 x 7 | $0.3800 x 300 | $0.3700 x 125
+  └─ No (Top 5):  $0.5600 x 30 | $0.5500 x 154 | $0.5400 x 208 | $0.5100 x 50 | $0.5000 x 20
+2026-01-16 17:03:02 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:03:02 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:03:02 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.4300 x 52 | $0.4200 x 111 | $0.4100 x 111 | $0.4000 x 111 | $0.3900 x 111
+  └─ No (Top 5):  $0.5600 x 70 | $0.3900 x 200 | $0.3800 x 127 | $0.3700 x 15 | $0.3600 x 265
+2026-01-16 17:03:03 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4400 x 257 | $0.3800 x 300 | $0.3700 x 124 | $0.3600 x 752 | $0.3500 x 119
+  └─ No (Top 5):  $0.5500 x 5 | $0.5400 x 93 | $0.5100 x 31 | $0.5000 x 20 | $0.4600 x 6
+2026-01-16 17:04:03 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:04:04 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:04:04 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.4300 x 32 | $0.4200 x 111 | $0.4100 x 111 | $0.4000 x 111 | $0.3900 x 111
+  └─ No (Top 5):  $0.5000 x 9 | $0.4800 x 50 | $0.4600 x 41 | $0.4100 x 287 | $0.4000 x 320
+2026-01-16 17:04:04 [OPEN ORDER] Ticker: KXLOWTMIA-26JAN17-B60.5 | Side: yes | Action: buy | Count: 1 | Type: limit | Price: 0.4200
+2026-01-16 17:04:04 [ORDER RESPONSE] OrderID: e2df0916... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 17:04:04 [OPEN ORDER] Ticker: KXLOWTMIA-26JAN17-B60.5 | Side: no | Action: buy | Count: 1 | Type: limit | Price: 0.4900
+2026-01-16 17:04:04 [ORDER RESPONSE] OrderID: d9f839a8... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 17:04:04 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4400 x 12 | $0.4200 x 243 | $0.4100 x 203 | $0.4000 x 19 | $0.3700 x 85
+  └─ No (Top 5):  $0.5500 x 4 | $0.5400 x 93 | $0.5200 x 4 | $0.5100 x 34 | $0.5000 x 20
+2026-01-16 17:05:05 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:05:05 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:05:05 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.4300 x 32 | $0.4200 x 111 | $0.4100 x 111 | $0.4000 x 111 | $0.3900 x 111
+  └─ No (Top 5):  $0.5400 x 25 | $0.4300 x 146 | $0.4200 x 200 | $0.4100 x 272 | $0.3900 x 38
+2026-01-16 17:05:06 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4400 x 12 | $0.4100 x 155 | $0.4000 x 272 | $0.3700 x 125 | $0.3600 x 752
+  └─ No (Top 5):  $0.5500 x 4 | $0.5400 x 93 | $0.5200 x 3 | $0.5100 x 34 | $0.5000 x 30
+2026-01-16 17:06:06 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:06:07 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:06:07 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.4300 x 32 | $0.4200 x 111 | $0.4100 x 111 | $0.4000 x 111 | $0.3900 x 111
+  └─ No (Top 5):  $0.4900 x 50 | $0.4100 x 18 | $0.3900 x 23 | $0.3500 x 40 | $0.3400 x 10
+2026-01-16 17:06:07 [OPEN ORDER] Ticker: KXLOWTMIA-26JAN17-B60.5 | Side: yes | Action: buy | Count: 1 | Type: limit | Price: 0.4200
+2026-01-16 17:06:07 [ORDER RESPONSE] OrderID: 7e1d3e46... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 17:06:07 [OPEN ORDER] Ticker: KXLOWTMIA-26JAN17-B60.5 | Side: no | Action: buy | Count: 1 | Type: limit | Price: 0.4800
+2026-01-16 17:06:07 [ORDER RESPONSE] OrderID: 71730200... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 17:06:08 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4200 x 12 | $0.4100 x 235 | $0.4000 x 14 | $0.3800 x 250 | $0.3700 x 124
+  └─ No (Top 5):  $0.5500 x 4 | $0.5400 x 105 | $0.5200 x 31 | $0.5000 x 20 | $0.4900 x 350
+2026-01-16 17:07:08 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:07:09 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:07:09 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.4300 x 52 | $0.4200 x 111 | $0.4100 x 111 | $0.4000 x 111 | $0.3900 x 111
+  └─ No (Top 5):  $0.5200 x 70 | $0.4300 x 200 | $0.4200 x 135 | $0.4100 x 13 | $0.4000 x 273
+2026-01-16 17:07:09 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4400 x 51 | $0.4100 x 3 | $0.4000 x 21 | $0.3900 x 250 | $0.3800 x 263
+  └─ No (Top 5):  $0.5500 x 5 | $0.5400 x 93 | $0.5100 x 35 | $0.5000 x 20 | $0.4600 x 8
+2026-01-16 17:07:09 [OPEN ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: yes | Action: buy | Count: 1 | Type: limit | Price: 0.4300
+2026-01-16 17:07:10 [ORDER RESPONSE] OrderID: 56d53751... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 17:07:10 [OPEN ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: no | Action: buy | Count: 1 | Type: limit | Price: 0.5400
+2026-01-16 17:07:10 [ORDER RESPONSE] OrderID: 4b701c82... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 17:08:10 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:08:11 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:08:11 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.4300 x 60 | $0.4200 x 111 | $0.4100 x 111 | $0.4000 x 111 | $0.3900 x 111
+  └─ No (Top 5):  $0.5600 x 45 | $0.4300 x 24 | $0.4200 x 15 | $0.3600 x 220 | $0.3500 x 40
+2026-01-16 17:08:11 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4400 x 64 | $0.4100 x 150 | $0.4000 x 263 | $0.3700 x 85 | $0.3600 x 752
+  └─ No (Top 5):  $0.5500 x 155 | $0.5400 x 208 | $0.5000 x 70 | $0.4900 x 92 | $0.4500 x 20
+2026-01-16 17:09:12 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:09:12 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:09:12 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.4300 x 40 | $0.4200 x 111 | $0.4100 x 111 | $0.4000 x 111 | $0.3900 x 111
+  └─ No (Top 5):  $0.4700 x 50 | $0.4500 x 15 | $0.4400 x 93 | $0.3900 x 200 | $0.3800 x 306
+2026-01-16 17:09:13 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4200 x 12 | $0.4000 x 12 | $0.3900 x 200 | $0.3800 x 251 | $0.3700 x 125
+  └─ No (Top 5):  $0.5500 x 255 | $0.5400 x 220 | $0.5100 x 50 | $0.5000 x 20 | $0.4500 x 20
+2026-01-16 17:20:35 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:20:36 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:20:36 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.4300 x 44 | $0.3400 x 208 | $0.3300 x 190 | $0.2300 x 200 | $0.0100 x 400
+  └─ No (Top 5):  $0.5600 x 70 | $0.4800 x 28 | $0.4200 x 44 | $0.4100 x 200 | $0.4000 x 174
+2026-01-16 17:20:36 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4400 x 50 | $0.3900 x 7 | $0.3800 x 350 | $0.3700 x 340 | $0.3600 x 752
+  └─ No (Top 5):  $0.5500 x 114 | $0.5400 x 97 | $0.5200 x 5 | $0.5100 x 37 | $0.5000 x 20
+2026-01-16 17:59:43 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:59:43 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 17:59:43 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.3000 x 24 | $0.2900 x 1 | $0.2600 x 200 | $0.2500 x 206 | $0.2300 x 200
+  └─ No (Top 5):  $0.5900 x 50 | $0.5800 x 8 | $0.5600 x 100 | $0.5500 x 70 | $0.5100 x 200
+2026-01-16 17:59:44 [OPEN ORDER] Ticker: KXLOWTMIA-26JAN17-B60.5 | Side: yes | Action: buy | Count: 1 | Type: limit | Price: 0.2900
+2026-01-16 17:59:44 [ORDER RESPONSE] OrderID: fb254f10... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 17:59:44 [OPEN ORDER] Ticker: KXLOWTMIA-26JAN17-B60.5 | Side: no | Action: buy | Count: 1 | Type: limit | Price: 0.5800
+2026-01-16 17:59:44 [ORDER RESPONSE] OrderID: f0c4b257... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 17:59:44 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4400 x 65 | $0.3900 x 7 | $0.3800 x 350 | $0.3700 x 473 | $0.3600 x 752
+  └─ No (Top 5):  $0.5500 x 153 | $0.5400 x 213 | $0.5200 x 27 | $0.5100 x 10 | $0.5000 x 20
+2026-01-16 18:00:46 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 18:00:46 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 18:00:46 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.3000 x 32 | $0.2900 x 1 | $0.2400 x 200 | $0.2300 x 200 | $0.0800 x 20
+  └─ No (Top 5):  $0.5800 x 32 | $0.5600 x 100 | $0.5500 x 70 | $0.5100 x 200 | $0.5000 x 100
+2026-01-16 18:00:47 [OPEN ORDER] Ticker: KXLOWTMIA-26JAN17-B60.5 | Side: yes | Action: buy | Count: 1 | Type: limit | Price: 0.2900
+2026-01-16 18:00:47 [ORDER RESPONSE] OrderID: 992a356f... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 18:00:47 [OPEN ORDER] Ticker: KXLOWTMIA-26JAN17-B60.5 | Side: no | Action: buy | Count: 1 | Type: limit | Price: 0.5700
+2026-01-16 18:00:47 [ORDER RESPONSE] OrderID: 34ddab2c... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 18:00:47 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4400 x 65 | $0.4200 x 258 | $0.3700 x 184 | $0.3600 x 752 | $0.3500 x 20
+  └─ No (Top 5):  $0.5500 x 166 | $0.5400 x 208 | $0.5200 x 27 | $0.5100 x 10 | $0.5000 x 20
+2026-01-16 18:01:48 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 18:01:48 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 18:01:48 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.2900 x 3 | $0.1200 x 200 | $0.1100 x 195 | $0.0900 x 8 | $0.0800 x 20
+  └─ No (Top 5):  $0.5900 x 50 | $0.5800 x 8 | $0.5700 x 200 | $0.5600 x 125 | $0.5500 x 70
+2026-01-16 18:01:49 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4400 x 52 | $0.4100 x 7 | $0.4000 x 250 | $0.3900 x 270 | $0.3700 x 99
+  └─ No (Top 5):  $0.5500 x 26 | $0.5400 x 93 | $0.5200 x 30 | $0.5100 x 4 | $0.5000 x 20
+2026-01-16 18:01:49 [OPEN ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: yes | Action: buy | Count: 1 | Type: limit | Price: 0.4300
+2026-01-16 18:01:49 [ORDER RESPONSE] OrderID: 1b0d9305... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 18:01:49 [OPEN ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: no | Action: buy | Count: 1 | Type: limit | Price: 0.5400
+2026-01-16 18:01:49 [ORDER RESPONSE] OrderID: bbd3c375... | Status: resting | Filled: 0 | Remaining: 1
+2026-01-16 18:02:49 [CANCEL ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: no | Price: 0.5400
+2026-01-16 18:02:49 [ERROR] Failed to cancel order: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders/bbd3c375-93e6-4132-a841-2a1ff25d7644
+2026-01-16 18:02:49 [ERROR] Traceback: Traceback (most recent call last):
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/market_bot.py", line 58, in start_trading
+    self.client.cancel_open_order(order['order_id'])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 274, in cancel_open_order
+    return self.delete(self.portfolio_url + '/orders/' + order_id)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 167, in delete
+    self.raise_if_bad_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 135, in raise_if_bad_response
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/.venv/lib/python3.14/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders/bbd3c375-93e6-4132-a841-2a1ff25d7644
+
+2026-01-16 18:02:49 [CANCEL ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: yes | Price: 0.4300
+2026-01-16 18:02:50 [ERROR] Failed to cancel order: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders/1b0d9305-f054-4eeb-9a54-91e6abbc7f75
+2026-01-16 18:02:50 [ERROR] Traceback: Traceback (most recent call last):
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/market_bot.py", line 58, in start_trading
+    self.client.cancel_open_order(order['order_id'])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 274, in cancel_open_order
+    return self.delete(self.portfolio_url + '/orders/' + order_id)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 167, in delete
+    self.raise_if_bad_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 135, in raise_if_bad_response
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/.venv/lib/python3.14/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders/1b0d9305-f054-4eeb-9a54-91e6abbc7f75
+
+2026-01-16 18:02:50 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 18:02:50 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 18:02:50 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.2900 x 1 | $0.1400 x 210 | $0.1300 x 231 | $0.0900 x 8 | $0.0800 x 20
+  └─ No (Top 5):  $0.5900 x 50 | $0.5800 x 8 | $0.5700 x 210 | $0.5600 x 125 | $0.5500 x 70
+2026-01-16 18:02:51 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4400 x 40 | $0.4300 x 1 | $0.4100 x 8 | $0.4000 x 250 | $0.3900 x 280
+  └─ No (Top 5):  $0.5500 x 26 | $0.5400 x 94 | $0.5100 x 40 | $0.5000 x 20 | $0.4600 x 9
+2026-01-16 18:02:51 [OPEN ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: yes | Action: buy | Count: 1 | Type: limit | Price: 0.4300
+2026-01-16 18:02:51 [ERROR] Failed to place order for KXHIGHMIA-26JAN17-B76.5: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders | API Error: {'error': {'code': 'service_unavailable', 'message': 'service_unavailable', 'service': 'exchange'}}
+2026-01-16 18:02:51 [ERROR] Order details: Ticker=KXHIGHMIA-26JAN17-B76.5, Side=yes, Action=buy, Count=1, Type=limit, Price=0.4300
+2026-01-16 18:02:51 [ERROR] Traceback: Traceback (most recent call last):
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/market_bot.py", line 263, in place_order
+    response = self.client.create_open_order(
+        ticker=order['ticker'],
+    ...<6 lines>...
+        expiration_ts=order['expiration_ts'],
+    )
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 243, in create_open_order
+    return self.post(self.portfolio_url + '/orders', body=playload)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 145, in post
+    self.raise_if_bad_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 135, in raise_if_bad_response
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/.venv/lib/python3.14/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders
+
+2026-01-16 18:02:51 [OPEN ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: no | Action: buy | Count: 1 | Type: limit | Price: 0.5400
+2026-01-16 18:02:51 [ERROR] Failed to place order for KXHIGHMIA-26JAN17-B76.5: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders | API Error: {'error': {'code': 'service_unavailable', 'message': 'service_unavailable', 'service': 'exchange'}}
+2026-01-16 18:02:51 [ERROR] Order details: Ticker=KXHIGHMIA-26JAN17-B76.5, Side=no, Action=buy, Count=1, Type=limit, Price=0.5400
+2026-01-16 18:02:51 [ERROR] Traceback: Traceback (most recent call last):
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/market_bot.py", line 263, in place_order
+    response = self.client.create_open_order(
+        ticker=order['ticker'],
+    ...<6 lines>...
+        expiration_ts=order['expiration_ts'],
+    )
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 243, in create_open_order
+    return self.post(self.portfolio_url + '/orders', body=playload)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 145, in post
+    self.raise_if_bad_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 135, in raise_if_bad_response
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/.venv/lib/python3.14/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders
+
+2026-01-16 18:03:51 [CANCEL ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: no | Price: 0.5400
+2026-01-16 18:03:52 [ERROR] Failed to cancel order: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders/bbd3c375-93e6-4132-a841-2a1ff25d7644
+2026-01-16 18:03:52 [ERROR] Traceback: Traceback (most recent call last):
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/market_bot.py", line 58, in start_trading
+    self.client.cancel_open_order(order['order_id'])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 274, in cancel_open_order
+    return self.delete(self.portfolio_url + '/orders/' + order_id)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 167, in delete
+    self.raise_if_bad_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 135, in raise_if_bad_response
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/.venv/lib/python3.14/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders/bbd3c375-93e6-4132-a841-2a1ff25d7644
+
+2026-01-16 18:03:52 [CANCEL ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: yes | Price: 0.4300
+2026-01-16 18:03:52 [ERROR] Failed to cancel order: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders/1b0d9305-f054-4eeb-9a54-91e6abbc7f75
+2026-01-16 18:03:52 [ERROR] Traceback: Traceback (most recent call last):
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/market_bot.py", line 58, in start_trading
+    self.client.cancel_open_order(order['order_id'])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 274, in cancel_open_order
+    return self.delete(self.portfolio_url + '/orders/' + order_id)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 167, in delete
+    self.raise_if_bad_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 135, in raise_if_bad_response
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/.venv/lib/python3.14/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders/1b0d9305-f054-4eeb-9a54-91e6abbc7f75
+
+2026-01-16 18:03:52 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 18:03:52 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 18:03:52 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.2900 x 1 | $0.1400 x 210 | $0.1300 x 231 | $0.0900 x 8 | $0.0800 x 20
+  └─ No (Top 5):  $0.5900 x 50 | $0.5800 x 8 | $0.5700 x 210 | $0.5600 x 125 | $0.5500 x 70
+2026-01-16 18:03:53 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4400 x 40 | $0.4300 x 1 | $0.4100 x 8 | $0.4000 x 250 | $0.3900 x 280
+  └─ No (Top 5):  $0.5500 x 26 | $0.5400 x 94 | $0.5100 x 40 | $0.5000 x 20 | $0.4600 x 9
+2026-01-16 18:03:53 [OPEN ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: yes | Action: buy | Count: 1 | Type: limit | Price: 0.4300
+2026-01-16 18:03:53 [ERROR] Failed to place order for KXHIGHMIA-26JAN17-B76.5: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders | API Error: {'error': {'code': 'service_unavailable', 'message': 'service_unavailable', 'service': 'exchange'}}
+2026-01-16 18:03:53 [ERROR] Order details: Ticker=KXHIGHMIA-26JAN17-B76.5, Side=yes, Action=buy, Count=1, Type=limit, Price=0.4300
+2026-01-16 18:03:53 [ERROR] Traceback: Traceback (most recent call last):
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/market_bot.py", line 263, in place_order
+    response = self.client.create_open_order(
+        ticker=order['ticker'],
+    ...<6 lines>...
+        expiration_ts=order['expiration_ts'],
+    )
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 243, in create_open_order
+    return self.post(self.portfolio_url + '/orders', body=playload)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 145, in post
+    self.raise_if_bad_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 135, in raise_if_bad_response
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/.venv/lib/python3.14/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders
+
+2026-01-16 18:03:53 [OPEN ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: no | Action: buy | Count: 1 | Type: limit | Price: 0.5400
+2026-01-16 18:03:53 [ERROR] Failed to place order for KXHIGHMIA-26JAN17-B76.5: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders | API Error: {'error': {'code': 'service_unavailable', 'message': 'service_unavailable', 'service': 'exchange'}}
+2026-01-16 18:03:53 [ERROR] Order details: Ticker=KXHIGHMIA-26JAN17-B76.5, Side=no, Action=buy, Count=1, Type=limit, Price=0.5400
+2026-01-16 18:03:53 [ERROR] Traceback: Traceback (most recent call last):
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/market_bot.py", line 263, in place_order
+    response = self.client.create_open_order(
+        ticker=order['ticker'],
+    ...<6 lines>...
+        expiration_ts=order['expiration_ts'],
+    )
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 243, in create_open_order
+    return self.post(self.portfolio_url + '/orders', body=playload)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 145, in post
+    self.raise_if_bad_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 135, in raise_if_bad_response
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/.venv/lib/python3.14/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders
+
+2026-01-16 18:04:53 [CANCEL ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: no | Price: 0.5400
+2026-01-16 18:04:53 [ERROR] Failed to cancel order: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders/bbd3c375-93e6-4132-a841-2a1ff25d7644
+2026-01-16 18:04:53 [ERROR] Traceback: Traceback (most recent call last):
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/market_bot.py", line 58, in start_trading
+    self.client.cancel_open_order(order['order_id'])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 274, in cancel_open_order
+    return self.delete(self.portfolio_url + '/orders/' + order_id)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 167, in delete
+    self.raise_if_bad_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 135, in raise_if_bad_response
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/.venv/lib/python3.14/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders/bbd3c375-93e6-4132-a841-2a1ff25d7644
+
+2026-01-16 18:04:54 [CANCEL ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: yes | Price: 0.4300
+2026-01-16 18:04:54 [ERROR] Failed to cancel order: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders/1b0d9305-f054-4eeb-9a54-91e6abbc7f75
+2026-01-16 18:04:54 [ERROR] Traceback: Traceback (most recent call last):
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/market_bot.py", line 58, in start_trading
+    self.client.cancel_open_order(order['order_id'])
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 274, in cancel_open_order
+    return self.delete(self.portfolio_url + '/orders/' + order_id)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 167, in delete
+    self.raise_if_bad_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 135, in raise_if_bad_response
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/.venv/lib/python3.14/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders/1b0d9305-f054-4eeb-9a54-91e6abbc7f75
+
+2026-01-16 18:04:54 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 18:04:55 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 18:04:55 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.2900 x 1 | $0.1400 x 210 | $0.1300 x 231 | $0.0900 x 8 | $0.0800 x 20
+  └─ No (Top 5):  $0.5900 x 50 | $0.5800 x 8 | $0.5700 x 210 | $0.5600 x 125 | $0.5500 x 70
+2026-01-16 18:04:55 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4400 x 40 | $0.4300 x 1 | $0.4100 x 8 | $0.4000 x 250 | $0.3900 x 280
+  └─ No (Top 5):  $0.5500 x 26 | $0.5400 x 94 | $0.5100 x 40 | $0.5000 x 20 | $0.4600 x 9
+2026-01-16 18:04:55 [OPEN ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: yes | Action: buy | Count: 1 | Type: limit | Price: 0.4300
+2026-01-16 18:04:55 [ERROR] Failed to place order for KXHIGHMIA-26JAN17-B76.5: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders | API Error: {'error': {'code': 'service_unavailable', 'message': 'service_unavailable', 'service': 'exchange'}}
+2026-01-16 18:04:55 [ERROR] Order details: Ticker=KXHIGHMIA-26JAN17-B76.5, Side=yes, Action=buy, Count=1, Type=limit, Price=0.4300
+2026-01-16 18:04:55 [ERROR] Traceback: Traceback (most recent call last):
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/market_bot.py", line 263, in place_order
+    response = self.client.create_open_order(
+        ticker=order['ticker'],
+    ...<6 lines>...
+        expiration_ts=order['expiration_ts'],
+    )
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 243, in create_open_order
+    return self.post(self.portfolio_url + '/orders', body=playload)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 145, in post
+    self.raise_if_bad_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 135, in raise_if_bad_response
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/.venv/lib/python3.14/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders
+
+2026-01-16 18:04:55 [OPEN ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: no | Action: buy | Count: 1 | Type: limit | Price: 0.5400
+2026-01-16 18:04:55 [ERROR] Failed to place order for KXHIGHMIA-26JAN17-B76.5: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders | API Error: {'error': {'code': 'service_unavailable', 'message': 'service_unavailable', 'service': 'exchange'}}
+2026-01-16 18:04:55 [ERROR] Order details: Ticker=KXHIGHMIA-26JAN17-B76.5, Side=no, Action=buy, Count=1, Type=limit, Price=0.5400
+2026-01-16 18:04:55 [ERROR] Traceback: Traceback (most recent call last):
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/market_bot.py", line 263, in place_order
+    response = self.client.create_open_order(
+        ticker=order['ticker'],
+    ...<6 lines>...
+        expiration_ts=order['expiration_ts'],
+    )
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 243, in create_open_order
+    return self.post(self.portfolio_url + '/orders', body=playload)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 145, in post
+    self.raise_if_bad_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 135, in raise_if_bad_response
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/.venv/lib/python3.14/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders
+
+2026-01-16 18:05:56 [CANCEL ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: no | Price: 0.5400
+2026-01-16 18:05:56 [ERROR] Failed to cancel order: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders/bbd3c375-93e6-4132-a841-2a1ff25d7644
+2026-01-16 18:05:56 [ERROR] Traceback: Traceback (most recent call last):
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/market_bot.py", line 58, in start_trading
+    price = yes_price if side == 'yes' else no_price
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 274, in cancel_open_order
+    return self.delete(self.portfolio_url + '/orders/' + order_id)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 167, in delete
+    self.raise_if_bad_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 135, in raise_if_bad_response
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/.venv/lib/python3.14/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders/bbd3c375-93e6-4132-a841-2a1ff25d7644
+
+2026-01-16 18:05:56 [CANCEL ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: yes | Price: 0.4300
+2026-01-16 18:05:56 [ERROR] Failed to cancel order: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders/1b0d9305-f054-4eeb-9a54-91e6abbc7f75
+2026-01-16 18:05:56 [ERROR] Traceback: Traceback (most recent call last):
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/market_bot.py", line 58, in start_trading
+    price = yes_price if side == 'yes' else no_price
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 274, in cancel_open_order
+    return self.delete(self.portfolio_url + '/orders/' + order_id)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 167, in delete
+    self.raise_if_bad_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 135, in raise_if_bad_response
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/.venv/lib/python3.14/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders/1b0d9305-f054-4eeb-9a54-91e6abbc7f75
+
+2026-01-16 18:05:56 [UPDATE INCENTIVE] Existing tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 18:05:57 [UPDATE INCENTIVE] Updated tickers: KXLOWTMIA-26JAN17-B60.5(Y:0.48,N:0.57), KXHIGHMIA-26JAN17-B76.5(Y:0.44,N:0.57)
+2026-01-16 18:05:57 [ORDER BOOK] Ticker: KXLOWTMIA-26JAN17-B60.5
+  └─ Yes (Top 5): $0.2900 x 1 | $0.1400 x 210 | $0.1300 x 231 | $0.0900 x 8 | $0.0800 x 20
+  └─ No (Top 5):  $0.5900 x 50 | $0.5800 x 8 | $0.5700 x 210 | $0.5600 x 125 | $0.5500 x 70
+2026-01-16 18:05:57 [ORDER BOOK] Ticker: KXHIGHMIA-26JAN17-B76.5
+  └─ Yes (Top 5): $0.4400 x 40 | $0.4300 x 1 | $0.4100 x 8 | $0.4000 x 250 | $0.3900 x 280
+  └─ No (Top 5):  $0.5500 x 26 | $0.5400 x 94 | $0.5100 x 40 | $0.5000 x 20 | $0.4600 x 9
+2026-01-16 18:05:57 [OPEN ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: yes | Action: buy | Count: 1 | Type: limit | Price: 0.4300
+2026-01-16 18:05:57 [ERROR] Failed to place order for KXHIGHMIA-26JAN17-B76.5: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders | API Error: {'error': {'code': 'service_unavailable', 'message': 'service_unavailable', 'service': 'exchange'}}
+2026-01-16 18:05:57 [ERROR] Order details: Ticker=KXHIGHMIA-26JAN17-B76.5, Side=yes, Action=buy, Count=1, Type=limit, Price=0.4300
+2026-01-16 18:05:57 [ERROR] Traceback: Traceback (most recent call last):
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/market_bot.py", line 263, in place_order
+    self.log(f"{self.get_datetime()} [OPEN ORDER] Ticker: {ticker} | Side: {side} | Action: {action} | Count: {count} | Type: {order_type} | Price: {price}")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        no_price_dollars= order['no_price_dollars'] if 'no_price_dollars' in order else None,
+    
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 243, in create_open_order
+    return self.post(self.portfolio_url + '/orders', body=playload)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 145, in post
+    self.raise_if_bad_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 135, in raise_if_bad_response
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/.venv/lib/python3.14/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders
+
+2026-01-16 18:05:57 [OPEN ORDER] Ticker: KXHIGHMIA-26JAN17-B76.5 | Side: no | Action: buy | Count: 1 | Type: limit | Price: 0.5400
+2026-01-16 18:05:57 [ERROR] Failed to place order for KXHIGHMIA-26JAN17-B76.5: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders | API Error: {'error': {'code': 'service_unavailable', 'message': 'service_unavailable', 'service': 'exchange'}}
+2026-01-16 18:05:57 [ERROR] Order details: Ticker=KXHIGHMIA-26JAN17-B76.5, Side=no, Action=buy, Count=1, Type=limit, Price=0.5400
+2026-01-16 18:05:57 [ERROR] Traceback: Traceback (most recent call last):
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/market_bot.py", line 263, in place_order
+    self.log(f"{self.get_datetime()} [OPEN ORDER] Ticker: {ticker} | Side: {side} | Action: {action} | Count: {count} | Type: {order_type} | Price: {price}")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<8 lines>...
+        no_price_dollars= order['no_price_dollars'] if 'no_price_dollars' in order else None,
+    
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 243, in create_open_order
+    return self.post(self.portfolio_url + '/orders', body=playload)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 145, in post
+    self.raise_if_bad_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/clients.py", line 135, in raise_if_bad_response
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yingxie/Documents/Git/Quant/Market_Making/KalshiModel/.venv/lib/python3.14/site-packages/requests/models.py", line 1024, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 503 Server Error: Service Unavailable for url: https://api.elections.kalshi.com/trade-api/v2/portfolio/orders
+
