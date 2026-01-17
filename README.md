@@ -214,9 +214,9 @@ For detailed API documentation, refer to:
 
 - [Kalshi API Documentation](https://docs.kalshi.com/api-reference/)
 
-## License
+## Author
 
-[Specify your license here]
+Mai He
 
 ## Disclaimer
 
