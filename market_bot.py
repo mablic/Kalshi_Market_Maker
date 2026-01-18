@@ -11,37 +11,36 @@ from cryptography.hazmat.primitives import serialization
 from datetime import datetime, timedelta
 
 TRADE_SIZE = 1
-TRADE_DELTA = 0.01
-WAIT_TIME = 60
-EXPIRATION_TS = 1
-TRADE_TICKER_SIZE = 2
-LOG_FILE = "trade.log"
-INCENTIVE_SIZE = 300
-TRADE_DELTA_RANGE = [0.01, 0.1]
-TRADE_DELTA_INCREMENT = 0.01
+WAIT_TIME = 600
+EXPIRATION_TS = 600
+
+TRADE_PRICE_RANGE = [0.05, 0.3]
+STOP_TRADE_TIME = 300
 
 CHECK_TIME = 3600
-OPEN_ORDERS_MAX = CHECK_TIME // WAIT_TIME * 0.8
-OPEN_POSITIONS_MAX = 5
+OPEN_POSITIONS_MAX = 2
+
+MINIMUM_MARKET_PRICE_DELTA = 0.2
+
+LOG_FILE = "trade.log"
 
 
 class MARKET_BOT:
 
     def __init__(self, incentive_program: INCENTIVE_PROGRAM, trade: TRADE, client: KalshiHttpClient):
         self.incentive_program = incentive_program
+        self.incentive_program.stop_trade_time = STOP_TRADE_TIME
         self.trade = trade
         self.client = client
         self.trade.trade_size = TRADE_SIZE
-        self.trade.trade_delta = TRADE_DELTA
         self.trade.expiration_ts = EXPIRATION_TS
         self.wait_time = WAIT_TIME
         self.log_file = LOG_FILE
-        self.trade_ticker_size = TRADE_TICKER_SIZE
-        self.trade.incentive_size = INCENTIVE_SIZE
+        self.trade.trade_price_range = TRADE_PRICE_RANGE
+        self.trade.open_position_max = OPEN_POSITIONS_MAX
+        self.trade.minimum_market_price_delta = MINIMUM_MARKET_PRICE_DELTA
 
-        self.open_positions_count = 0
-        self.open_orders_count = 0
-        self.last_check_time = datetime.now()
+        self.historical_trade_list = []
 
     def get_datetime(self):
         return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -116,10 +115,17 @@ class MARKET_BOT:
                             self.log(f"{self.get_datetime()} [SKIP POSITION] Ticker: {ticker} | Position: {position_count} | Reason: No bid price available")
                             continue
                         
+                        self.historical_trade_list.append({
+                            'ticker': position.get('ticker', 'N/A'),
+                            'side': side,
+                            'price': yes_price_dollars if side == 'yes' else no_price_dollars,
+                            'count': count,
+                            'datetime': self.get_datetime(),
+                        })
+                        
                         ticker = position.get('ticker', 'N/A')
                         price = yes_price_dollars if side == 'yes' else no_price_dollars
                         self.log(f"{self.get_datetime()} [CLOSE POSITION] Ticker: {ticker} | Side: {side} | Price: {price} | Count: {count}")
-                        self.open_positions_count += 1
                         self.client.close_open_position_order(
                             ticker=position['ticker'],
                             side=side,
@@ -150,172 +156,117 @@ class MARKET_BOT:
                 self.log(f"{self.get_datetime()} [SKIP TRADING] Open positions: {', '.join(position_info)}")
                 return
 
+            curr_market_incentive = self.client.get_market_incentive()
+            self.incentive_program.load_market_incentive(curr_market_incentive['incentive_programs'])
+            incentive_tickers = self.incentive_program.get_open_incentive_tickers()
+            ticker_dict = {}
+            for ticker in incentive_tickers:
+                curr_market_ticker = self.client.get_market_ticker(ticker)
+                ticker_dict[ticker] = curr_market_ticker['market']
+            self.incentive_program.fill_incentive_tickers(ticker_dict)
             curr_traded_incentive = self.incentive_program.get_trade_incentive_dict()
-            if not curr_traded_incentive:
+
+            if self.trade.has_open_position():
+                try:
+                    self.log(f"{self.get_datetime()} [EXISTING TRADING] open positions")
+                    self.trade.check_open_order_expiration(curr_traded_incentive)
+                    if self.trade.has_open_position():
+                        curr_traded_orders = self.trade.get_open_trade_orders()
+                        self.place_order(curr_traded_orders)
+                except Exception as e:
+                    self.log(f"{self.get_datetime()} [ERROR] Failed to update incentive: {str(e)}")
+                    self.log(f"{self.get_datetime()} [ERROR] Traceback: {traceback.format_exc()}")
+
+            if not self.trade.has_open_position():            
                 try:
                     self.log(f"{self.get_datetime()} [NEW SESSION] Starting new trading session")
-                    curr_market_incentive = self.client.get_market_incentive()
-                    self.incentive_program.load_market_incentive(curr_market_incentive['incentive_programs'])
-                    incentive_tickers = self.incentive_program.get_open_incentive_tickers()
-                    ticker_dict = {}
-                    for ticker in incentive_tickers:
-                        curr_market_ticker = self.client.get_market_ticker(ticker)
-                        ticker_dict[ticker] = curr_market_ticker['market']
-                    self.incentive_program.fill_incentive_tickers(ticker_dict)
-                    self.incentive_program.prepare_trade_incentive(self.trade_ticker_size)
-                    curr_traded_incentive = self.incentive_program.get_trade_incentive_dict()
-                    # Format incentive info
-                    incentive_summary = []
-                    for ticker, data in curr_traded_incentive.items():
-                        yes_price = data.get('yes_ask_dollars', 'N/A')
-                        no_price = data.get('no_ask_dollars', 'N/A')
-                        reward = data.get('period_reward', 0) / 100 if data.get('period_reward') else 0
-                        incentive_summary.append(f"{ticker}(Y:{yes_price},N:{no_price},Reward:${reward:.2f})")
-                    self.log(f"{self.get_datetime()} [NEW INCENTIVE] Trading tickers: {', '.join(incentive_summary)}")
                     self.place_order(curr_traded_incentive)
                 except Exception as e:
                     self.log(f"{self.get_datetime()} [ERROR] Failed to start new trading session: {str(e)}")
                     self.log(f"{self.get_datetime()} [ERROR] Traceback: {traceback.format_exc()}")
-            else:
-                try:
-                    # Format existing incentive info
-                    incentive_summary = []
-                    for ticker, data in curr_traded_incentive.items():
-                        yes_price = data.get('yes_ask_dollars', 'N/A')
-                        no_price = data.get('no_ask_dollars', 'N/A')
-                        incentive_summary.append(f"{ticker}(Y:{yes_price},N:{no_price})")
-                    self.log(f"{self.get_datetime()} [UPDATE INCENTIVE] Existing tickers: {', '.join(incentive_summary)}")
-                    curr_traded_incentive = self.incentive_program.get_trade_incentive_dict()
-                    incentive_tickers = self.incentive_program.get_trade_ticker()
-                    ticker_dict = {}
-                    for ticker in incentive_tickers:
-                        curr_market_ticker = self.client.get_market_ticker(ticker)
-                        ticker_dict[ticker] = curr_market_ticker['market']
-                    curr_traded_incentive = self.incentive_program.update_trade_incentive_dict(ticker_dict)
-                    if curr_traded_incentive:
-                        incentive_summary = []
-                        for ticker, data in curr_traded_incentive.items():
-                            yes_price = data.get('yes_ask_dollars', 'N/A')
-                            no_price = data.get('no_ask_dollars', 'N/A')
-                            incentive_summary.append(f"{ticker}(Y:{yes_price},N:{no_price})")
-                        self.log(f"{self.get_datetime()} [UPDATE INCENTIVE] Updated tickers: {', '.join(incentive_summary)}")
-                        self.place_order(curr_traded_incentive)
-                    else:
-                        self.log(f"{self.get_datetime()} [NEW SESSION] No existing incentive, starting new trading session")
-                        curr_market_incentive = self.client.get_market_incentive()
-                        self.incentive_program.load_market_incentive(curr_market_incentive['incentive_programs'])
-                        incentive_tickers = self.incentive_program.get_open_incentive_tickers()
-                        ticker_dict = {}
-                        for ticker in incentive_tickers:
-                            curr_market_ticker = self.client.get_market_ticker(ticker)
-                            ticker_dict[ticker] = curr_market_ticker['market']
-                        self.incentive_program.fill_incentive_tickers(ticker_dict)
-                        self.incentive_program.prepare_trade_incentive(self.trade_ticker_size)
-                        curr_traded_incentive = self.incentive_program.get_trade_incentive_dict()
-                        incentive_summary = []
-                        for ticker, data in curr_traded_incentive.items():
-                            yes_price = data.get('yes_ask_dollars', 'N/A')
-                            no_price = data.get('no_ask_dollars', 'N/A')
-                            reward = data.get('period_reward', 0) / 100 if data.get('period_reward') else 0
-                            incentive_summary.append(f"{ticker}(Y:{yes_price},N:{no_price},Reward:${reward:.2f})")
-                        self.log(f"{self.get_datetime()} [NEW INCENTIVE] Trading tickers: {', '.join(incentive_summary)}")
-                        self.place_order(curr_traded_incentive)
-                except Exception as e:
-                    self.log(f"{self.get_datetime()} [ERROR] Failed to update incentive: {str(e)}")
-                    self.log(f"{self.get_datetime()} [ERROR] Traceback: {traceback.format_exc()}")
+
         except Exception as e:
             self.log(f"{self.get_datetime()} [ERROR] Critical error in start_trading: {str(e)}")
             self.log(f"{self.get_datetime()} [ERROR] Traceback: {traceback.format_exc()}")
     
     def place_order(self, curr_traded_incentive: dict):
+        trade_book_dict = {}
         for trade_ticker in curr_traded_incentive:
-            try:
-                order_book = self.client.get_market_ticker_order_book(trade_ticker)['orderbook']
-                # Format top 5 best prices for Yes and No
-                yes_prices = sorted(order_book.get('yes_dollars', []), key=lambda x: -float(x[0]))[:5]
-                no_prices = sorted(order_book.get('no_dollars', []), key=lambda x: -float(x[0]))[:5]
-                
-                yes_book_str = ' | '.join([f"${float(p[0]):.4f} x {p[1]}" for p in yes_prices])
-                no_book_str = ' | '.join([f"${float(p[0]):.4f} x {p[1]}" for p in no_prices])
-                
-                self.log(f"{self.get_datetime()} [ORDER BOOK] Ticker: {trade_ticker}")
-                self.log(f"  └─ Yes (Top 5): {yes_book_str}")
-                self.log(f"  └─ No (Top 5):  {no_book_str}")
-                self.trade.get_balance(self.client.get_balance()['balance'])
-                # self.trade.get_balance(1000)
-                market_orders = []
+            trade_book_dict[trade_ticker] = self.client.get_market_ticker_order_book(trade_ticker)['orderbook']
+
+        self.trade.prepare_open_order(curr_traded_incentive, trade_book_dict)
+
+        if self.trade.has_open_position():
+            self.trade.balance = self.client.get_balance()['balance']
+            market_orders = self.trade.create_open_order()
+            for order in market_orders:
                 try:
-                    yes_order = self.trade.create_open_order(trade_ticker, curr_traded_incentive[trade_ticker], order_book, 'yes')
-                except Exception as e:
-                    self.log(f"{self.get_datetime()} [ERROR] Failed to create yes order for {trade_ticker}: {str(e)}")
-                    yes_order = None
-                
-                try:
-                    no_order = self.trade.create_open_order(trade_ticker, curr_traded_incentive[trade_ticker], order_book, 'no')
-                except Exception as e:
-                    self.log(f"{self.get_datetime()} [ERROR] Failed to create no order for {trade_ticker}: {str(e)}")
-                    no_order = None
-                
-                if yes_order and no_order:
-                    market_orders.append(yes_order)
-                    market_orders.append(no_order)
+                    ticker = order.get('ticker', 'N/A')
+                    side = order.get('side', 'N/A')
+                    action = order.get('action', 'N/A')
+                    count = order.get('count', 0)
+                    order_type = order.get('type', 'N/A')
+                    yes_price = order.get('yes_price_dollars', None)
+                    no_price = order.get('no_price_dollars', None)
+                    price = yes_price if side == 'yes' else no_price
+
+                    title = order.get('title', 'N/A')
+                    rules_primary = order.get('rules_primary', 'N/A')
+                    yes_qty = order.get('yes_qty', 0)
+                    no_qty = order.get('no_qty', 0)
+                    yes_price = order.get('yes_price', 0)
+                    no_price = order.get('no_price', 0)
+
+                    self.log(f"{self.get_datetime()} [OPEN ORDER] Ticker: {ticker} | Title: {title} | Rules Primary: {rules_primary}")
+                    self.log(f"  └─ Side: {side} | Action: {action} | Count: {count} | Type: {order_type} | Price: {price}")
+                    self.log(f"  └─ Market Yes Price: ${order['market_yes_price']:.4f} | Market No Price: ${order['market_no_price']:.4f}")
+                    self.log(f"  └─ Market Book: Yes Qty: {yes_qty} | No Qty: {no_qty} | Yes Price: ${yes_price:.4f} | No Price: ${no_price:.4f}")
                     
-                for order in market_orders:
-                    if order:
-                        self.open_orders_count += 1
-                        try:
-                            ticker = order.get('ticker', 'N/A')
-                            side = order.get('side', 'N/A')
-                            action = order.get('action', 'N/A')
-                            count = order.get('count', 0)
-                            order_type = order.get('type', 'N/A')
-                            yes_price = order.get('yes_price_dollars', None)
-                            no_price = order.get('no_price_dollars', None)
-                            price = yes_price if side == 'yes' else no_price
-                            
-                            self.log(f"{self.get_datetime()} [OPEN ORDER] Ticker: {ticker} | Side: {side} | Action: {action} | Count: {count} | Type: {order_type} | Price: {price}")
-                            
-                            response = self.client.create_open_order(
-                                ticker=order['ticker'],
-                                side=order['side'],
-                                action=order['action'],
-                                count=order['count'],
-                                type=order['type'],
-                                yes_price_dollars= order['yes_price_dollars'] if 'yes_price_dollars' in order else None,
-                                no_price_dollars= order['no_price_dollars'] if 'no_price_dollars' in order else None,
-                                expiration_ts=order['expiration_ts'],
-                            )
-                            
-                            # Format response
-                            if response and 'order' in response:
-                                resp_order = response['order']
-                                order_id = resp_order.get('order_id', 'N/A')
-                                status = resp_order.get('status', 'N/A')
-                                fill_count = resp_order.get('fill_count', 0)
-                                remaining = resp_order.get('remaining_count', 0)
-                                self.log(f"{self.get_datetime()} [ORDER RESPONSE] OrderID: {order_id[:8]}... | Status: {status} | Filled: {fill_count} | Remaining: {remaining}")
-                            else:
-                                self.log(f"{self.get_datetime()} [ORDER RESPONSE] {response}")
-                        except Exception as e:
-                            ticker = order.get('ticker', 'N/A')
-                            error_msg = str(e)
-                            
-                            # Try to extract API error details if it's an HTTPError
-                            if hasattr(e, 'response') and hasattr(e.response, '_error_details'):
-                                api_error = e.response._error_details
-                                error_msg += f" | API Error: {api_error}"
-                            elif "API Error Response" in str(e):
-                                # Fallback: extract from error message if available
-                                pass
-                            
-                            self.log(f"{self.get_datetime()} [ERROR] Failed to place order for {ticker}: {error_msg}")
-                            
-                            # Log order details for debugging
-                            self.log(f"{self.get_datetime()} [ERROR] Order details: Ticker={ticker}, Side={side}, Action={action}, Count={count}, Type={order_type}, Price={price}")
-                            self.log(f"{self.get_datetime()} [ERROR] Traceback: {traceback.format_exc()}")
-            except Exception as e:
-                self.log(f"{self.get_datetime()} [ERROR] Failed to process order for {trade_ticker}: {str(e)}")
-                self.log(f"{self.get_datetime()} [ERROR] Traceback: {traceback.format_exc()}")
+                    # Extract price values for API call
+                    yes_price_dollars = order.get('yes_price_dollars', None)
+                    no_price_dollars = order.get('no_price_dollars', None)
+                    
+                    # Log what we're sending to API for debugging
+                    # self.log(f"  └─ API Payload: yes_price_dollars={yes_price_dollars}, no_price_dollars={no_price_dollars}, expiration_ts={order.get('expiration_ts')}")
+                    
+                    response = self.client.create_open_order(
+                        ticker=order['ticker'],
+                        side=order['side'],
+                        action=order['action'],
+                        count=order['count'],
+                        type=order['type'],
+                        yes_price_dollars=yes_price_dollars,
+                        no_price_dollars=no_price_dollars,
+                        expiration_ts=order['expiration_ts'],
+                    )
+                    
+                    # Format response
+                    if response and 'order' in response:
+                        resp_order = response['order']
+                        order_id = resp_order.get('order_id', 'N/A')
+                        status = resp_order.get('status', 'N/A')
+                        fill_count = resp_order.get('fill_count', 0)
+                        remaining = resp_order.get('remaining_count', 0)
+                        self.log(f"{self.get_datetime()} [ORDER RESPONSE] OrderID: {order_id[:8]}... | Status: {status} | Filled: {fill_count} | Remaining: {remaining}")
+                    else:
+                        self.log(f"{self.get_datetime()} [ORDER RESPONSE] {response}")
+                except Exception as e:
+                    ticker = order.get('ticker', 'N/A')
+                    error_msg = str(e)
+                    
+                    # Try to extract API error details if it's an HTTPError
+                    if hasattr(e, 'response') and hasattr(e.response, '_error_details'):
+                        api_error = e.response._error_details
+                        error_msg += f" | API Error: {api_error}"
+                    elif "API Error Response" in str(e):
+                        # Fallback: extract from error message if available
+                        pass
+                    
+                    self.log(f"{self.get_datetime()} [ERROR] Failed to place order for {ticker}: {error_msg}")
+                    
+                    # Log order details for debugging
+                    self.log(f"{self.get_datetime()} [ERROR] Order details: Ticker={ticker}, Side={side}, Action={action}, Count={count}, Type={order_type}, Price={price}")
+                    self.log(f"{self.get_datetime()} [ERROR] Traceback: {traceback.format_exc()}")
 
     def run(self):
         """Main trading loop with error handling - keeps running even if errors occur."""
@@ -323,17 +274,7 @@ class MARKET_BOT:
         while True:
             try:
                 self.start_trading()
-                if self.open_positions_count >= 5 and self.trade.trade_delta + self.trade_delta_increment < self.trade_delta_range[1]:
-                    self.log(f"{self.get_datetime()} [TRADE DELTA] Increasing trade delta from {self.trade.trade_delta} to {self.trade.trade_delta + self.trade_delta_increment}")
-                    self.trade.trade_delta += self.trade_delta_increment
-                if self.open_orders_count < OPEN_ORDERS_MAX and self.trade.trade_delta - self.trade_delta_increment > self.trade_delta_range[0]:
-                    self.log(f"{self.get_datetime()} [TRADE DELTA] Decreasing trade delta from {self.trade.trade_delta} to {self.trade.trade_delta - self.trade_delta_increment}")
-                    self.trade.trade_delta -= self.trade_delta_increment
-                if datetime.now() - self.last_check_time > timedelta(seconds=CHECK_TIME):
-                    self.log(f"{self.get_datetime()} [CHECK TIME] Checking time, resetting open positions and orders counts")
-                    self.last_check_time = datetime.now()
-                    self.open_positions_count = 0
-                    self.open_orders_count = 0
+                self.log(f"{self.get_datetime()} [HISTORICAL TRADE count] {len(self.historical_trade_list)}")
             except KeyboardInterrupt:
                 self.log(f"{self.get_datetime()} [SHUTDOWN] Received interrupt signal, shutting down gracefully")
                 raise  # Re-raise to allow clean shutdown

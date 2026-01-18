@@ -221,8 +221,8 @@ class KalshiHttpClient(KalshiBaseClient):
           action: Optional[str] = None,
           count: Optional[int] = None, 
           type: Optional[str] = None,
-          yes_price_dollars: Optional[float] = None,
-          no_price_dollars: Optional[float] = None,
+          yes_price_dollars: Optional[str] = None,  
+          no_price_dollars: Optional[str] = None,  
           time_in_force: Optional[str] = None,
           expiration_ts: Optional[int] = None,
         ):
@@ -240,6 +240,7 @@ class KalshiHttpClient(KalshiBaseClient):
         }
         # Remove None values to avoid API errors
         playload = {k: v for k, v in playload.items() if v is not None}
+        # print(f"THE PLAYLOAD: {playload}")
         return self.post(self.portfolio_url + '/orders', body=playload)
 
 
